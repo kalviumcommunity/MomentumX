@@ -1,0 +1,25 @@
+#container {
+    position: relative;
+    overflow: scroll;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    top: 64px;
+    scroll-snap-type: y mandatory;
+}
+
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    position: relative;
+    top: 0px;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
