@@ -4,6 +4,8 @@ import "./LandingPage.css";
 import Aos  from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
+import LaunchIcon from '@mui/icons-material/Launch';
+import { Link } from "react-router-dom";
 
 function LandingPage() {
     useEffect(()=>{
@@ -39,6 +41,7 @@ function LandingPage() {
                 position="fixed"
                 top="0px"
                 boxShadow="4px 6px 6px rgba(0, 0, 0, 0.4)"
+                zIndex="999"
             >
                 <Flex
                     w="100%-160px"
@@ -54,28 +57,37 @@ function LandingPage() {
                         width="174px"
                     />
                     <Flex justifyContent="space-between" width="182px">
-                        <Button
-                            h="30px"
-                            w="82px"
-                            bgColor="#121212"
-                            color="white"
-                            textAlign="center"
-                            borderRadius="2px"
-                            className="small-regular"
-                        >
-                            Login
-                        </Button>
-                        <Button
-                            h="30px"
-                            w="82px"
-                            bgColor="white"
-                            color="#121212"
-                            textAlign="center"
-                            borderRadius="2px"
-                            className="small-bold"
-                        >
-                            Register
-                        </Button>
+                        <Box h="30px" w="82px">
+                            <Link to="/login">
+                                <Button
+                                    h="30px"
+                                    w="82px"
+                                    bgColor="#121212"
+                                    color="white"
+                                    textAlign="center"
+                                    borderRadius="2px"
+                                    className="Xsmall regular"
+                                    sx={{"&:hover": {bgColor: "#191919"}}}
+                                >
+                                    Login
+                                </Button>
+                            </Link>
+                        </Box>
+                        <Box h="30px" w="82px">
+                            <Link to="/signup">
+                                <Button
+                                    h="30px"
+                                    w="82px"
+                                    bgColor="white"
+                                    color="#121212"
+                                    textAlign="center"
+                                    borderRadius="2px"
+                                    className="Xsmall semi-bold"
+                                >
+                                    Register
+                                </Button>
+                            </Link>
+                        </Box>
                     </Flex>
                 </Flex>
             </Box>
@@ -84,7 +96,9 @@ function LandingPage() {
                     <Flex
                         flexDirection="row"
                         width="calc(100% - 144px)"
-                        height="100%"
+                        height="calc(100% - 64px)"
+                        position="absolute"
+                        top="64px"
                     >
                         <Flex
                             flexDirection="column"
@@ -98,6 +112,7 @@ function LandingPage() {
                                 data-aos-duration="1000"
                                 data-aos-once="false"
                                 data-aos-mirror="true"
+                                data-aos-offset="200"
                             >
                                 Enabling growth through personalized progress
                                 tracking
@@ -109,6 +124,7 @@ function LandingPage() {
                                 data-aos-delay="100"
                                 data-aos-once="false"
                                 data-aos-mirror="true"
+                                data-aos-offset="200"
                             >
                                 Our vision is to create a culture of continuous
                                 growth and improvement, where individuals and
@@ -117,17 +133,31 @@ function LandingPage() {
                                 solutions that provide actionable insights and
                                 drive positive outcomes.
                             </div>
-                            <Button
-                                w="162px"
-                                h="50px"
-                                borderRadius="2px"
-                                backgroundColor="#D5D5D5"
-                                data-aos="zoom-in"
-                                data-aos-duration="800"
-                                data-aos-delay="500"
-                                data-aos-once="false"
-                                data-aos-mirror="true"
-                            ></Button>
+                            <Box h="44px" w="154px">
+                                <Link to="/signup">
+                                    <Button
+                                        w="154px"
+                                        h="44px"
+                                        borderRadius="2px"
+                                        backgroundColor="#D5D5D5"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="800"
+                                        data-aos-delay="500"
+                                        data-aos-once="false"
+                                        data-aos-mirror="true"
+                                        data-aos-offset="200"
+                                        className="small bold"
+                                    >
+                                        <p>Get Started</p>
+                                        <LaunchIcon
+                                            sx={{
+                                                marginLeft: "8px",
+                                                fontSize: "18px",
+                                            }}
+                                        />
+                                    </Button>
+                                </Link>
+                            </Box>
                         </Flex>
                         <Flex
                             flexDirection="column"
@@ -140,7 +170,9 @@ function LandingPage() {
                     <Flex
                         flexDirection="row"
                         width="calc(100% - 144px)"
-                        height="100%"
+                        height="calc(100% - 64px)"
+                        position="absolute"
+                        top="64px"
                     >
                         <Flex
                             flexDirection="column"
@@ -159,6 +191,7 @@ function LandingPage() {
                                 data-aos-duration="1000"
                                 data-aos-once="false"
                                 data-aos-mirror="true"
+                                data-aos-offset="200"
                             >
                                 Bye - Bye, Spreadsheets
                             </div>
@@ -169,6 +202,7 @@ function LandingPage() {
                                 data-aos-delay="100"
                                 data-aos-once="false"
                                 data-aos-mirror="true"
+                                data-aos-offset="200"
                             >
                                 Keep every detail of a project centralized in
                                 real time so up-to-date info can flow freely
@@ -181,7 +215,9 @@ function LandingPage() {
                     <Flex
                         flexDirection="row"
                         width="calc(100% - 144px)"
-                        height="100%"
+                        height="calc(100% - 64px)"
+                        position="absolute"
+                        top="64px"
                     >
                         <Flex
                             flexDirection="column"
@@ -195,6 +231,7 @@ function LandingPage() {
                                 data-aos-duration="1000"
                                 data-aos-once="false"
                                 data-aos-mirror="true"
+                                data-aos-offset="200"
                             >
                                 Customize how your team's work flows
                             </div>
@@ -205,6 +242,7 @@ function LandingPage() {
                                 data-aos-delay="100"
                                 data-aos-once="false"
                                 data-aos-mirror="true"
+                                data-aos-offset="200"
                             >
                                 Set up, clean up, and automate even the most
                                 complicated project workflows.
@@ -221,7 +259,9 @@ function LandingPage() {
                     <Flex
                         flexDirection="row"
                         width="calc(100% - 144px)"
-                        height="100%"
+                        height="calc(100% - 64px)"
+                        position="absolute"
+                        top="64px"
                     >
                         <Flex
                             flexDirection="column"
@@ -240,8 +280,9 @@ function LandingPage() {
                                 data-aos-duration="1000"
                                 data-aos-once="false"
                                 data-aos-mirror="true"
+                                data-aos-offset="200"
                             >
-                                Get useful insights of your members{" "}
+                                Get useful insights from your members{" "}
                             </div>
                             <div
                                 className="description-regular"
@@ -250,6 +291,7 @@ function LandingPage() {
                                 data-aos-delay="100"
                                 data-aos-once="false"
                                 data-aos-mirror="true"
+                                data-aos-offset="200"
                             >
                                 Insights gained from members data provide
                                 valuable information that can guide
