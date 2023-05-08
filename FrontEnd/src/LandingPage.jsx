@@ -66,7 +66,8 @@ function LandingPage() {
                                     color="white"
                                     textAlign="center"
                                     borderRadius="2px"
-                                    className="Xsmall regular"
+                                    className="xsmall"
+                                    fontWeight="medium"
                                     sx={{"&:hover": {bgColor: "#191919"}}}
                                 >
                                     Login
@@ -82,7 +83,8 @@ function LandingPage() {
                                     color="#121212"
                                     textAlign="center"
                                     borderRadius="2px"
-                                    className="Xsmall semi-bold"
+                                    className="xsmall"
+                                    fontWeight="semibold"
                                 >
                                     Register
                                 </Button>
@@ -145,8 +147,9 @@ function LandingPage() {
                                         data-aos-delay="500"
                                         data-aos-once="false"
                                         data-aos-mirror="true"
-                                        data-aos-offset="200"
-                                        className="small bold"
+                                        data-aos-offset="100"
+                                        className="small"
+                                        fontWeight="bold"
                                     >
                                         <p>Get Started</p>
                                         <LaunchIcon

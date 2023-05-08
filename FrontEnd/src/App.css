@@ -38,7 +38,7 @@ html {
 /* Font Sizes */
 
 
-.Xsmall {
+.xsmall {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px !important;
 }
@@ -46,32 +46,4 @@ html {
 .small {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px !important;
-}
-
-
-/* Font Weights */
-
-
-.light {
-    font-weight: 300 !important;
-}
-
-.regular {
-    font-weight: 400 !important;
-}
-
-.medium {
-    font-weight: 500 !important;
-}
-
-.semi-bold {
-    font-weight: 600 !important;
-}
-
-.bold {
-    font-weight: 700 !important;
-}
-
-.Xbold {
-    font-weight: 800 !important;
 }
