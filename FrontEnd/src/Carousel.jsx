@@ -22,6 +22,7 @@ const Carousel = () => {
           pagination={{
               clickable: true,
           }}
+          loop={true}
       >
           <SwiperSlide>
               <Image
