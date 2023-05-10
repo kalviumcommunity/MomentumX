@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from "@chakra-ui/react";
+import { Box, Button, Flex, Image } from "@chakra-ui/react";
 import "./App.css";
 import "./LandingPage.css";
 import Aos  from "aos";
@@ -50,7 +50,7 @@ function LandingPage() {
                     alignItems="center"
                     justifyContent="space-between"
                 >
-                    <img
+                    <Image
                         src="./assets/MomentumXLogo.jpeg"
                         alt="MomentumX"
                         height="62px"
@@ -66,7 +66,7 @@ function LandingPage() {
                                     color="white"
                                     textAlign="center"
                                     borderRadius="2px"
-                                    className="xsmall"
+                                    className="x-small"
                                     fontWeight="medium"
                                     sx={{"&:hover": {bgColor: "#191919"}}}
                                 >
@@ -83,7 +83,7 @@ function LandingPage() {
                                     color="#121212"
                                     textAlign="center"
                                     borderRadius="2px"
-                                    className="xsmall"
+                                    className="x-small"
                                     fontWeight="semibold"
                                 >
                                     Register
@@ -93,7 +93,7 @@ function LandingPage() {
                     </Flex>
                 </Flex>
             </Box>
-            <div id="container">
+            <Box id="container">
                 <section className="section">
                     <Flex
                         flexDirection="row"
@@ -108,7 +108,7 @@ function LandingPage() {
                             height="100%"
                             justifyContent="center"
                         >
-                            <div
+                            <Box
                                 className="title-bold"
                                 data-aos="fade-right"
                                 data-aos-duration="1000"
@@ -118,8 +118,8 @@ function LandingPage() {
                             >
                                 Enabling growth through personalized progress
                                 tracking
-                            </div>
-                            <div
+                            </Box>
+                            <Box
                                 className="description-regular"
                                 data-aos="fade-right"
                                 data-aos-duration="1000"
@@ -134,7 +134,7 @@ function LandingPage() {
                                 progress with effective and personalized
                                 solutions that provide actionable insights and
                                 drive positive outcomes.
-                            </div>
+                            </Box>
                             <Box h="44px" w="154px">
                                 <Link to="/signup">
                                     <Button
@@ -188,7 +188,7 @@ function LandingPage() {
                             height="100%"
                             justifyContent="center"
                         >
-                            <div
+                            <Box
                                 className="title-bold"
                                 data-aos="fade-left"
                                 data-aos-duration="1000"
@@ -197,8 +197,8 @@ function LandingPage() {
                                 data-aos-offset="200"
                             >
                                 Bye - Bye, Spreadsheets
-                            </div>
-                            <div
+                            </Box>
+                            <Box
                                 className="description-regular"
                                 data-aos="fade-left"
                                 data-aos-duration="1000"
@@ -210,11 +210,11 @@ function LandingPage() {
                                 Keep every detail of a project centralized in
                                 real time so up-to-date info can flow freely
                                 across people and teams.
-                            </div>
+                            </Box>
                         </Flex>
                     </Flex>
                 </section>
-                <section className="section" id="three">
+                <section className="section">
                     <Flex
                         flexDirection="row"
                         width="calc(100% - 144px)"
@@ -228,7 +228,7 @@ function LandingPage() {
                             height="100%"
                             justifyContent="center"
                         >
-                            <div
+                            <Box
                                 className="title-bold"
                                 data-aos="fade-right"
                                 data-aos-duration="1000"
@@ -237,8 +237,8 @@ function LandingPage() {
                                 data-aos-offset="200"
                             >
                                 Customize how your team's work flows
-                            </div>
-                            <div
+                            </Box>
+                            <Box
                                 className="description-regular"
                                 data-aos="fade-right"
                                 data-aos-duration="1000"
@@ -249,7 +249,7 @@ function LandingPage() {
                             >
                                 Set up, clean up, and automate even the most
                                 complicated project workflows.
-                            </div>
+                            </Box>
                         </Flex>
                         <Flex
                             flexDirection="column"
@@ -258,7 +258,7 @@ function LandingPage() {
                         ></Flex>
                     </Flex>
                 </section>
-                <section className="section" id="four">
+                <section className="section">
                     <Flex
                         flexDirection="row"
                         width="calc(100% - 144px)"
@@ -277,7 +277,7 @@ function LandingPage() {
                             height="100%"
                             justifyContent="center"
                         >
-                            <div
+                            <Box
                                 className="title-bold"
                                 data-aos="fade-left"
                                 data-aos-duration="1000"
@@ -286,8 +286,8 @@ function LandingPage() {
                                 data-aos-offset="200"
                             >
                                 Get useful insights from your members{" "}
-                            </div>
-                            <div
+                            </Box>
+                            <Box
                                 className="description-regular"
                                 data-aos="fade-left"
                                 data-aos-duration="1000"
@@ -300,11 +300,11 @@ function LandingPage() {
                                 valuable information that can guide
                                 decision-making, improve performance, and drive
                                 positive outcomes.
-                            </div>
+                            </Box>
                         </Flex>
                     </Flex>
                 </section>
-            </div>
+            </Box>
         </>
     );
 }
