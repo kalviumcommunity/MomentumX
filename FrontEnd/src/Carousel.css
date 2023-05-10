@@ -1,0 +1,11 @@
+.swiper-button-next, .swiper-button-prev {
+    color: #B8B8B8;
+}
+
+.swiper-pagination-bullet {
+    background-color: #B8B8B8;
+}
+
+:root {
+    --swiper-navigation-size: 28px;
+}
