@@ -18,14 +18,10 @@ const Carousel = () => {
           slidesPerView={1}
           navigation
           effect="fade"
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
           pagination={{
               clickable: true,
-              horizontalClass: "abcd",
           }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          loop={true}
       >
           <SwiperSlide>
               <Image
