@@ -54,7 +54,7 @@ const Carousel = () => {
               >
                   <Text
                       className="heading"
-                      fontWeight="bold"
+                      fontWeight="semiBold"
                       color="#FFFFFF"
                       textAlign="center"
                       margin="0px 20px 8px 20px"
@@ -104,7 +104,7 @@ const Carousel = () => {
               >
                   <Text
                       className="heading"
-                      fontWeight="bold"
+                      fontWeight="semiBold"
                       color="#FFFFFF"
                       textAlign="center"
                       margin="0px 20px 8px 20px"
@@ -153,7 +153,7 @@ const Carousel = () => {
               >
                   <Text
                       className="heading"
-                      fontWeight="bold"
+                      fontWeight="semiBold"
                       color="#FFFFFF"
                       textAlign="center"
                       margin="0px 20px 8px 20px"

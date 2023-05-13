@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import "./App.css";
 import "./LandingPage.css";
 import Aos  from "aos";
@@ -35,6 +35,22 @@ function LandingPage() {
     return (
         <>
             <Box
+                bgImg="url('./assets/BG.jpg')"
+                bgSize="cover"
+                h="100vh"
+                w="100vw"
+                position="fixed"
+                zIndex="-999"
+            />
+            <Box
+                bgColor="black"
+                h="100vh"
+                w="100vw"
+                opacity="40%"
+                position="fixed"
+                zIndex="-998"
+            />
+            <Box
                 w="100vw"
                 h="64px"
                 bgColor="#121212"
@@ -68,7 +84,7 @@ function LandingPage() {
                                     borderRadius="2px"
                                     className="x-small"
                                     fontWeight="medium"
-                                    sx={{"&:hover": {bgColor: "#191919"}}}
+                                    sx={{ "&:hover": { bgColor: "#191919" } }}
                                 >
                                     Login
                                 </Button>
@@ -151,7 +167,12 @@ function LandingPage() {
                                         className="small"
                                         fontWeight="bold"
                                     >
-                                        <p>Get Started</p>
+                                        <Text
+                                            className="small"
+                                            fontWeight="bold"
+                                        >
+                                            Get Started
+                                        </Text>
                                         <LaunchIcon
                                             sx={{
                                                 marginLeft: "8px",
