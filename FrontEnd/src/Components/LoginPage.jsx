@@ -1,9 +1,8 @@
 import Carousel from "./Carousel";
-import { Box, Button, Flex, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Text, Image } from "@chakra-ui/react"
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { useContext } from "react";
-import  UserType  from "./Context.jsx";
-import './Form.css'
+import { useAuth0 } from '@auth0/auth0-react';
+import '../Styles/Form.css'
 
 
 
@@ -35,14 +34,53 @@ function LoginPage() {
         setTimeout(() => {
             console.log(values);
             setSubmitting(false);
-            handleClick();
         }, 400);
     };
 
-    const { handleValueChange } = useContext(UserType);
+    const { loginWithRedirect } = useAuth0();
 
-    function handleClick() {
-        handleValueChange(true);
+    function handleLogin() {
+        loginWithRedirect()
+    }
+
+    const LoginButton = () => {
+        return (
+            <Flex
+                onClick={() => {
+                    handleLogin();
+                }}
+                alignItems="center"
+                justifyContent="space-between"
+                backgroundColor="white"
+                height="44px"
+                width="260px"
+                borderRadius="4px"
+                border="1px solid #cfcfcf"
+                boxShadow="-2px 4px 6px rgba(0, 0, 0, 0.5)"
+                _hover={{
+                    cursor: "pointer",
+                }}
+                _active={{
+                    boxShadow: "-0px 2px 6px rgba(0, 0, 0, 0.5)",
+                    transform: "translateY(1px) translateX(-1px)",
+                }}
+            >
+                <Image
+                    marginLeft="24px"
+                    src="./assets/GoogleLogo.png"
+                    height="32px"
+                    width="32px"
+                />
+                <Text
+                    marginRight="26px"
+                    color="#4A4A4A"
+                    className="small"
+                    fontWeight="medium"
+                >
+                    Continue with Google
+                </Text>
+            </Flex>
+        );
     }
 
     return (
@@ -78,6 +116,7 @@ function LoginPage() {
                         w="52%"
                         borderRadius="0px 28px 28px 0px"
                         backgroundColor="#E8F4F9"
+                        position="relative"
                     >
                         <Box>
                             <Text
@@ -184,14 +223,14 @@ function LoginPage() {
                                                 className="small"
                                                 fontWeight="bold"
                                                 border="1px solid #FFFFFF"
-                                                boxShadow="-4px 6px 6px rgba(0, 0, 0, 0.5)"
+                                                boxShadow="-2px 4px 6px rgba(0, 0, 0, 0.5)"
                                                 _hover={{
                                                     cursor: "pointer",
                                                     color: "#E5FFE4",
                                                 }}
                                                 _active={{
                                                     boxShadow:
-                                                        "-2px 4px 6px rgba(0, 0, 0, 0.5)",
+                                                        "-0px 2px 6px rgba(0, 0, 0, 0.5)",
                                                     transform:
                                                         "translateY(1px) translateX(-1px)",
                                                 }}
@@ -202,6 +241,44 @@ function LoginPage() {
                                     </Form>
                                 )}
                             </Formik>
+                            <Flex
+                                height="200px"
+                                width="100%"
+                                flexDirection="column"
+                                position="absolute"
+                                bottom="12px"
+                                justifyContent="space-around"
+                                alignItems="center"
+                            >
+                                <Flex
+                                    flexDirection="row"
+                                    justifyContent="center"
+                                    alignItems="center"
+                                >
+                                    <Box
+                                        height="1px"
+                                        width="200px"
+                                        backgroundColor="#4A4A4A"
+                                    ></Box>
+                                    <Text
+                                        margin="8px"
+                                        fontWeight="bold"
+                                        className="x-small"
+                                        color="#4A4A4A"
+                                    >
+                                        or
+                                    </Text>
+                                    <Box
+                                        height="1px"
+                                        width="200px"
+                                        backgroundColor="#4A4A4A"
+                                    ></Box>
+                                </Flex>
+                                {LoginButton()}
+                                <Text color="#4A4A4A" className="x-small">
+                                    Don't have an account?<a href="./signup"><Text className="x-small" fontWeight="medium" display="inline" margin="6px" color="#6443AB">Signup</Text></a>
+                                </Text>
+                            </Flex>
                         </Box>
                     </Box>
                 </Flex>

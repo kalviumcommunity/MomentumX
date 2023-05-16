@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
-import "./App.css";
-import "./LandingPage.css";
+import "../Styles/LandingPage.css";
 import Aos  from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
@@ -32,6 +31,8 @@ function LandingPage() {
           
           });
     },[])
+
+
     return (
         <>
             <Box
