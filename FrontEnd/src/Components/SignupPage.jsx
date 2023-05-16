@@ -1,7 +1,7 @@
 import Carousel from "./Carousel";
-import { Box, Button, Flex, Text, Image } from "@chakra-ui/react"
+import { GoogleButton } from "./GoogleButton";
+import { Box, Button, Flex, Text } from "@chakra-ui/react"
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { useAuth0 } from '@auth0/auth0-react';
 import '../Styles/Form.css'
 
 
@@ -49,49 +49,6 @@ function SignupPage() {
         }, 400);
     }; 
 
-    const { loginWithRedirect } = useAuth0();
-
-    function handleLogin() {
-        loginWithRedirect()
-    }
-
-    const LoginButton = () => {
-        return (
-            <Flex
-                onClick={()=>{handleLogin()}}
-                alignItems="center"
-                justifyContent="space-between"
-                backgroundColor="white"
-                height="44px"
-                width="260px"
-                borderRadius="4px"
-                border="1px solid #cfcfcf"
-                boxShadow="-2px 4px 6px rgba(0, 0, 0, 0.5)"
-                _hover={{
-                    cursor: "pointer",
-                }}
-                _active={{
-                    boxShadow: "-0px 2px 6px rgba(0, 0, 0, 0.5)",
-                    transform: "translateY(1px) translateX(-1px)",
-                }}
-            >
-                <Image
-                    marginLeft="20px"
-                    src="./assets/GoogleLogo.png"
-                    height="32px"
-                    width="32px"
-                />
-                <Text
-                    marginRight="22px"
-                    color="#4A4A4A"
-                    className="small"
-                    fontWeight="bold"
-                >
-                    Continue with Google
-                </Text>
-            </Flex>
-        );
-    }
 
     return (
         <>
@@ -369,14 +326,55 @@ function SignupPage() {
                                     </Form>
                                 )}
                             </Formik>
-                            <Flex height="160px" width="100%" flexDirection="column" position="absolute" bottom="12px" justifyContent="space-around" alignItems="center">
-                                <Flex flexDirection="row" justifyContent="center" alignItems="center">
-                                    <Box height="1px" width="200px" backgroundColor="#4A4A4A"></Box>
-                                    <Text margin="8px" fontWeight="bold" className="x-small" color="#4A4A4A">or</Text>
-                                    <Box height="1px" width="200px" backgroundColor="#4A4A4A"></Box>
+                            <Flex
+                                height="160px"
+                                width="100%"
+                                flexDirection="column"
+                                position="absolute"
+                                bottom="12px"
+                                justifyContent="space-around"
+                                alignItems="center"
+                            >
+                                <Flex
+                                    flexDirection="row"
+                                    justifyContent="center"
+                                    alignItems="center"
+                                >
+                                    <Box
+                                        height="1px"
+                                        width="200px"
+                                        backgroundColor="#4A4A4A"
+                                    ></Box>
+                                    <Text
+                                        margin="8px"
+                                        fontWeight="bold"
+                                        className="x-small"
+                                        color="#4A4A4A"
+                                    >
+                                        or
+                                    </Text>
+                                    <Box
+                                        height="1px"
+                                        width="200px"
+                                        backgroundColor="#4A4A4A"
+                                    ></Box>
                                 </Flex>
-                                {LoginButton()}
-                                <Text color="#4A4A4A" className="x-small" >Already a user?<a href="./login"><Text className="x-small" fontWeight="medium" display="inline" margin="6px" color="#6443AB">Login</Text></a></Text>
+                                {<GoogleButton />}
+                                <Box color="#4A4A4A" className="x-small">
+                                    Already a user?
+                                    <a href="./login">
+                                        <Text
+                                            className="x-small"
+                                            fontWeight="medium"
+                                            display="inline"
+                                            margin="6px"
+                                            color="#6443AB"
+                                            textDecoration="underline"
+                                        >
+                                            Login
+                                        </Text>
+                                    </a>
+                                </Box>
                             </Flex>
                         </Box>
                     </Box>
