@@ -2,7 +2,7 @@ import Carousel from "./Carousel";
 import { Box, Button, Flex, Text } from "@chakra-ui/react"
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useContext } from "react";
-import { UserType } from "./App";
+import  UserType  from "./Context.jsx";
 import './Form.css'
 
 

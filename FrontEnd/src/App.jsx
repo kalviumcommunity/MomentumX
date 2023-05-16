@@ -2,8 +2,9 @@ import LandingPage from "./LandingPage"
 import LoginPage from "./LoginPage"
 import SignupPage from "./SignupPage"
 import Dashboard from "./Dashboard";
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Routes, Route, useNavigate} from "react-router-dom"
+import UserType from "./Context"
 import "./App.css";
 
 export const UserType = createContext();
