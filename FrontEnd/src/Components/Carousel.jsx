@@ -8,8 +8,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import 'swiper/css/autoplay'
 import 'swiper/css/effect-fade';
-import './Carousel.css'
-import './App.css'
+import '../Styles/Carousel.css'
 
 const Carousel = () => {
   return (
@@ -54,7 +53,7 @@ const Carousel = () => {
               >
                   <Text
                       className="heading"
-                      fontWeight="bold"
+                      fontWeight="semiBold"
                       color="#FFFFFF"
                       textAlign="center"
                       margin="0px 20px 8px 20px"
@@ -104,7 +103,7 @@ const Carousel = () => {
               >
                   <Text
                       className="heading"
-                      fontWeight="bold"
+                      fontWeight="semiBold"
                       color="#FFFFFF"
                       textAlign="center"
                       margin="0px 20px 8px 20px"
@@ -153,7 +152,7 @@ const Carousel = () => {
               >
                   <Text
                       className="heading"
-                      fontWeight="bold"
+                      fontWeight="semiBold"
                       color="#FFFFFF"
                       textAlign="center"
                       margin="0px 20px 8px 20px"
