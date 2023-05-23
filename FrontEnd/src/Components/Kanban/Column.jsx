@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Droppable } from 'react-beautiful-dnd'
 import Task from './Task';
@@ -8,22 +8,23 @@ function Column({title, tasks, id}) {
         <Box
             borderRadius="4px"
             width="340px"
-            height="480px"
-            overflowY="scroll"
+            height="calc(100vh - 140px)"
             border="1px gray solid"
-            sx={{
-                "&::-webkit-scrollbar": {
-                    display: "none",
-                },
-            }}
         >
-            <Text className="heading" textAlign="center">
+            <Heading position="fixed" className='sub-heading' fontWeight="medium" textAlign="left" margin="12px">
                 {title}
-            </Text>
+            </Heading>
             <Droppable droppableId={id}>
                 {(provided, snapshot) => (
                     <Box
-                        minHeight="100px"
+                        marginTop="44px"
+                        height="calc(100% - 44px)"
+                        overflowY="scroll"
+                        sx={{
+                            "&::-webkit-scrollbar": {
+                                display: "none",
+                            },
+                        }}
                         flexGrow="1"
                         ref={provided.innerRef}
                         {...provided.droppableProps}

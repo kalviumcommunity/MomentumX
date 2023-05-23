@@ -13,14 +13,15 @@ function Task({task, index}) {
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
                     isdragging= {snapshot.isDragging.toString()}
-                    borderRadius="12px"
+                    minHeight="120px"
+                    borderRadius="4px"
                     padding="8px"
                     cursor="pointer"
                     display="flex"
                     flexDirection="column"
                     justifyContent="space-between"
                     backgroundColor="aqua"
-                    margin="9px 0px"
+                    margin="12px 8px"
                 >
                     <Text className='xx-small' fontWeight="medium">{task.estimatedTime}</Text>
                     <Text className='small' fontWeight="medium">{task.taskHead}</Text>

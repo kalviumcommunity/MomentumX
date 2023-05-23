@@ -71,7 +71,6 @@ function Board() {
     };
 
     function findTaskById(id, array) {
-      console.log(id, array)
       return array.find((item) => item.id == id)
     }
 
@@ -85,7 +84,7 @@ function Board() {
         <Text textAlign="center" className="heading">
           Progress board
         </Text>
-        <Flex flexDir="row" justifyContent="space-around" alignItems="center">
+        <Flex flexDir="row" justifyContent="space-evenly" alignItems="center">
           <Column
             title={"To Do"}
             tasks={toDo}
@@ -97,7 +96,7 @@ function Board() {
             id={"inProgress"}
           />
           <Column
-            title={"completed"}
+            title={"Completed"}
             tasks={completed}
             id={"completed"}
           />
