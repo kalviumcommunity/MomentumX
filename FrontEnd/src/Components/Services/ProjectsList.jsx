@@ -27,6 +27,7 @@ function ProjectsList() {
           {data.length > 0 ? (
               data.map((item, index) => (
                   <Flex
+                      key={index}
                       sx={{
                           "&:hover": {
                               cursor: "pointer",

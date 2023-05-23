@@ -1,4 +1,5 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
+import Board from "./Kanban/Board";
 import ProjectsList from "./Services/ProjectsList";
 import UserProfile from "./UserProfile";
 
@@ -33,6 +34,9 @@ function Dashboard() {
                 <ProjectsList/>
                 <UserProfile />
             </Flex>
+            <Box height="100vh" width="calc(100vw - 340px)" position="fixed" top="0px" right="0px" >
+                <Board/>
+            </Box>
         </>
     ); 
     
