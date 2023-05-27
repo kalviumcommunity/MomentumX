@@ -37,22 +37,6 @@ html {
 
 /* Font Sizes */
 
-
-.xx-small {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px !important;
-}
-
-.x-small {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px !important;
-}
-
-.small {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px !important;
-}
-
 .heading {
     font-family: 'Roboto', sans-serif;
     font-size: 24px !important;
@@ -62,3 +46,26 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 20px !important; 
 }
+
+.medium {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px !important;
+}
+
+.small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px !important;
+}
+
+.x-small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px !important;
+}
+
+.xx-small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px !important;
+}
+
+
+

@@ -1,53 +1,10 @@
-[
-    {
-        "name": "Sample Project" 
+{
+    "jawahar.lingam@kalvium.community" : {
+        "name" : "Jawahar Lingam",
+        "projects" : ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5"]
     },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Technical"
-    },
-    {
-        "name": "Technical"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
-    },
-    {
-        "name": "Sample Project"
+    "jawaharlingam4@gmail.com" : {
+        "name" : "Jawahar Lingam",
+        "projects" : ["Project 1", "Project 2", "Project 3", "Project 4", "Project 5"]
     }
-]
+}

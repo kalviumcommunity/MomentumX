@@ -1,30 +1,30 @@
 const tasks = [
     {
       id: 1,
-      taskHead: 'Task 1',
+      taskHead: 'Lorem ipsum dolor sit amet, consect elit. dolor sit amet dolor.',
       description: 'Description of Task 1',
-      estimatedTime: '2 hours',
+      estimatedTime: 'Estimated- 1:00 hrs',
       status: 'toDo'
     },
     {
       id: 2,
-      taskHead: 'Task 2',
+      taskHead: 'Lorem ipsum dolor sit amet, consect elit. dolor sit amet dolor.',
       description: 'Description of Task 2',
-      estimatedTime: '1 hour',
+      estimatedTime: 'Estimated- 2:00 hrs',
       status: 'inProgress'
     },
     {
       id: 3,
-      taskHead: 'Task 3',
+      taskHead: 'Lorem ipsum dolor sit amet, consect elit. dolor sit amet dolor.',
       description: 'Description of Task 3',
-      estimatedTime: '3 hours',
+      estimatedTime: 'Estimated- 0:45 hrs',
       status: 'completed'
     },
     {
       id: 4,
-      taskHead: 'Task 4',
+      taskHead: 'Lorem ipsum dolor sit amet, consect elit. dolor sit amet dolor.',
       description: 'Description of Task 2',
-      estimatedTime: '1 hour',
+      estimatedTime: 'Estimated- 2:00 hrs',
       status: 'inProgress'
     }
 ];
