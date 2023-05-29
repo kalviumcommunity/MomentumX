@@ -1,22 +1,14 @@
-import { Box, Heading, Button, Flex } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import { Box, Heading, Flex } from '@chakra-ui/react';
+import React from 'react';
 import { Droppable } from 'react-beautiful-dnd'
-import CreateTask from './CreateTask';
 import Task from './Task';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
-function Column({title, tasks, id, setTasks}) {
-
-    const [isCreatingTask, setIsCreatingTask] = useState(false);
+function Column({title, tasks, id, setIsCreatingTask}) {
 
     const handleCreateTask = () => {
       setIsCreatingTask(true);
     };
-  
-    const handleCloseCreateTask = () => {
-      setIsCreatingTask(false);
-    };
-  
 
     return (
       <Box
@@ -75,15 +67,6 @@ function Column({title, tasks, id, setTasks}) {
             </Box>
           )}
         </Droppable>
-        {isCreatingTask && (
-          <Box margin="12px">
-            <CreateTask
-              setTasks={setTasks}
-              isOpen={isCreatingTask}
-              onClose={handleCloseCreateTask}
-            />
-          </Box>
-        )}
       </Box>
     );
 }

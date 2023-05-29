@@ -1,14 +1,16 @@
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { DragDropContext } from "react-beautiful-dnd";
+import CreateTask from './CreateTask';
 import Column from './Column';
 
-function Board({projectName}) {
+function Board({projectName, userEmail}) {
 
     const [tasks, setTasks] = useState([]);
     const [toDo, setToDo] = useState([]);
     const [inProgress, setInProgress] = useState([]);
     const [completed, setCompleted] = useState([])
+    const [isCreatingTask, setIsCreatingTask] = useState(false);
 
 
     function filterTasksByStatus(status, setMethod) {
@@ -25,20 +27,27 @@ function Board({projectName}) {
 
     }
 
+
     function updateTaskStatus(id, status) {
-      fetch(`http://localhost:3003/tasks/${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ status }),
-      }).catch((error) => {
-        console.log("Error:", error);
-      });
+
+      if (userEmail && projectName) {
+        
+        fetch(`http://localhost:3003/tasks/${projectName}/${userEmail}/${id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ status }),
+        }).catch((error) => {
+          console.log("Error:", error);
+        });
+
+      }
     }
 
     useEffect(() => {
-        fetch("http://localhost:3003/tasks")
+      if (userEmail && projectName) {
+        fetch(`http://localhost:3003/tasks/${projectName}/${userEmail}`)
           .then((response) => response.json())
           .then((json) => {
             setTasks(json)
@@ -46,7 +55,8 @@ function Board({projectName}) {
           .catch((error) => {
             console.log("Error:", error);
           });
-    }, []);
+      }
+    }, [projectName, userEmail]);
 
     useEffect(() => {
       if (tasks.length > 0) {
@@ -94,6 +104,10 @@ function Board({projectName}) {
       return array.filter((item) => item.id != id)
     }
 
+    const handleCloseCreateTask = () => {
+      setIsCreatingTask(false);
+    };
+
 
     return (
       <Box margin="28px">
@@ -105,6 +119,7 @@ function Board({projectName}) {
               tasks={toDo}
               id={"toDo"}
               setTasks={setTasks}
+              setIsCreatingTask= {setIsCreatingTask}
             />
             <Column
               title={"In Progress"}
@@ -114,6 +129,17 @@ function Board({projectName}) {
             <Column title={"Completed"} tasks={completed} id={"completed"} />
           </Flex>
         </DragDropContext>
+        {isCreatingTask && (
+          <Box margin="12px">
+            <CreateTask
+              setTasks={setTasks}
+              isOpen={isCreatingTask}
+              onClose={handleCloseCreateTask}
+              projectName={projectName}
+              userEmail={userEmail}
+            />
+          </Box>
+        )}
       </Box>
     );
 }

@@ -1,6 +1,6 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import mockData from './Services/mock.json'
+import userData from './Services/mock.json'
 import Board from "./Kanban/Board";
 import UserProfile from "./UserProfile";
 import ProjectsList from "./Services/ProjectsList";
@@ -8,15 +8,18 @@ import ProjectsList from "./Services/ProjectsList";
 function Dashboard() {
 
     const [userEmail, setUserEmail] = useState()
-    const [projects, setProjects] = useState([]);
+    const [projectsList, setProjectsList] = useState([]);
     const [projectName, setProjectName] = useState("Loading...")
 
     useEffect(() => {
         if (userEmail) {
-            setProjects(mockData[userEmail]?.projects || []);
-
+            for (let i = 0; i < userData.length; i++) {
+                if (userData[i].email === userEmail) {
+                    setProjectsList(userData[i].projectsList);
+                }
+              }
         }
-    }, [userEmail]);
+    }, [userEmail,userData]);
       
     return (
         <>
@@ -44,11 +47,11 @@ function Dashboard() {
                     width="194px"
                     marginLeft="32px"
                 />
-                {userEmail && <ProjectsList setProjectName={setProjectName} projects={projects} />}
+                {projectsList && <ProjectsList setProjectName={setProjectName} projectsList={projectsList} />}
                 <UserProfile setUserEmail={setUserEmail} />
             </Flex>
             <Box height="100vh" width="calc(100vw - 340px)" position="fixed" top="0px" right="0px" >
-                <Board projectName= {projectName}/>
+                <Board projectName= {projectName} userEmail= {userEmail}/>
             </Box>
         </>
     ); 

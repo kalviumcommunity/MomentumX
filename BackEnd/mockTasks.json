@@ -1,0 +1,308 @@
+[
+  {
+    "name": "Social Media App",
+    "data": {
+      "jawahar.lingam@kalvium.community": {
+        "tasks": [
+          {
+            "id": 1,
+            "taskHead": "Implement user authentication",
+            "description": "Create a secure login and registration system for users",
+            "estimatedTime": "120",
+            "status": "toDo"
+          },
+          {
+            "id": 2,
+            "taskHead": "Build user profile page",
+            "description": "Design and develop a page for users to manage their profile information",
+            "estimatedTime": "90",
+            "status": "inProgress"
+          },
+          {
+            "id": 3,
+            "taskHead": "Develop news feed functionality",
+            "description": "Implement a feed to display posts from users and organizations",
+            "estimatedTime": "150",
+            "status": "completed"
+          },
+          {
+            "id": 4,
+            "taskHead": "Implement post creation",
+            "description": "Allow users to create and publish posts on the platform",
+            "estimatedTime": "Estimated- 01:45 hrs",
+            "status": "toDo"
+          },
+          {
+            "id": 5,
+            "taskHead": "Design user interface",
+            "description": "Create an intuitive and visually appealing interface for the app",
+            "estimatedTime": "180",
+            "status": "inProgress"
+          },
+          {
+            "id": 6,
+            "taskHead": "Improve app performance",
+            "description": "Optimize code and database queries to enhance app speed and responsiveness",
+            "estimatedTime": "135",
+            "status": "toDo"
+          },
+          {
+            "id": 7,
+            "taskHead": "Implement notifications",
+            "description": "Integrate push notifications to keep users updated with new activities",
+            "estimatedTime": "90",
+            "status": "inProgress"
+          },
+          {
+            "id": 8,
+            "taskHead": "Add social sharing functionality",
+            "description": "Allow users to share posts and interact with social media platforms",
+            "estimatedTime": "175",
+            "status": "completed"
+          },
+          {
+            "id": 9,
+            "taskHead": "Fix bug on user registration",
+            "description": "Resolve an issue where some users are unable to register successfully",
+            "estimatedTime": "75",
+            "status": "toDo"
+          },
+          {
+            "id": 10,
+            "taskHead": "Implement user search",
+            "description": "Add a feature to search for users by name or username",
+            "estimatedTime": "150",
+            "status": "toDo"
+          }
+        ]
+      },
+      "jawaharlingam4@gmail.com": {
+        "tasks": [
+          {
+            "id": 1,
+            "taskHead": "Design app logo",
+            "description": "Create a visually appealing and recognizable logo for the app",
+            "estimatedTime": "60",
+            "status": "toDo"
+          },
+          {
+            "id": 2,
+            "taskHead": "Implement user feedback system",
+            "description": "Allow users to provide feedback and suggestions within the app",
+            "estimatedTime": "105",
+            "status": "inProgress"
+          },
+          {
+            "id": 3,
+            "taskHead": "Perform security audit",
+            "description": "Conduct a thorough security assessment of the app to identify vulnerabilities",
+            "estimatedTime": "210",
+            "status": "completed"
+          },
+          {
+            "id": 4,
+            "taskHead": "Add image upload functionality",
+            "description": "Enable users to upload and share images on the platform",
+            "estimatedTime": "135",
+            "status": "toDo"
+          },
+          {
+            "id": 5,
+            "taskHead": "Optimize database queries",
+            "description": "Improve the efficiency of database queries for better performance",
+            "estimatedTime": "150",
+            "status": "inProgress"
+          },
+          {
+            "id": 6,
+            "taskHead": "Implement chat feature",
+            "description": "Integrate a real-time chat system for users to communicate with each other",
+            "estimatedTime": "210",
+            "status": "completed"
+          },
+          {
+            "id": 7,
+            "taskHead": "Create user onboarding tutorial",
+            "description": "Design and develop an interactive tutorial to help new users get started",
+            "estimatedTime": "105",
+            "status": "toDo"
+          },
+          {
+            "id": 8,
+            "taskHead": "Perform cross-platform testing",
+            "description": "Test the app on multiple devices and operating systems to ensure compatibility",
+            "estimatedTime": "180",
+            "status": "inProgress"
+          },
+          {
+            "id": 9,
+            "taskHead": "Implement privacy settings",
+            "description": "Allow users to customize their privacy preferences and control their data",
+            "estimatedTime": "135",
+            "status": "completed"
+          },
+          {
+            "id": 10,
+            "taskHead": "Fix UI layout issues",
+            "description": "Address and resolve layout inconsistencies and design flaws in the app",
+            "estimatedTime": "150",
+            "status": "toDo"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "E-commerce Website",
+    "data": {
+      "jawahar.lingam@kalvium.community": {
+        "tasks": [
+          {
+            "id": 1,
+            "taskHead": "Design homepage layout",
+            "description": "Create an attractive and user-friendly layout for the website homepage",
+            "estimatedTime": "150",
+            "status": "toDo"
+          },
+          {
+            "id": 2,
+            "taskHead": "Implement product listing functionality",
+            "description": "Develop a system to display products and allow users to browse and search",
+            "estimatedTime": "180",
+            "status": "inProgress"
+          },
+          {
+            "id": 3,
+            "taskHead": "Configure payment gateway",
+            "description": "Integrate a secure payment gateway to enable online transactions",
+            "estimatedTime": "135",
+            "status": "completed"
+          },
+          {
+            "id": 4,
+            "taskHead": "Implement user cart",
+            "description": "Allow users to add products to a cart and proceed to checkout",
+            "estimatedTime": "105",
+            "status": "toDo"
+          },
+          {
+            "id": 5,
+            "taskHead": "Design product detail page",
+            "description": "Create a page to display detailed information about a selected product",
+            "estimatedTime": "120",
+            "status": "inProgress"
+          },
+          {
+            "id": 6,
+            "taskHead": "Implement user reviews",
+            "description": "Enable users to rate and review products on the website",
+            "estimatedTime": "90",
+            "status": "completed"
+          },
+          {
+            "id": 7,
+            "taskHead": "Add social media integration",
+            "description": "Integrate social media sharing and login features for seamless user experience",
+            "estimatedTime": "150",
+            "status": "toDo"
+          },
+          {
+            "id": 8,
+            "taskHead": "Perform website optimization",
+            "description": "Optimize website performance for faster loading and better user experience",
+            "estimatedTime": "180",
+            "status": "inProgress"
+          },
+          {
+            "id": 9,
+            "taskHead": "Implement order tracking",
+            "description": "Allow users to track the status of their orders in real-time",
+            "estimatedTime": "135",
+            "status": "completed"
+          },
+          {
+            "id": 10,
+            "taskHead": "Configure shipping methods",
+            "description": "Set up various shipping options and calculate shipping costs",
+            "estimatedTime": "105",
+            "status": "toDo"
+          }
+        ]
+      },
+      "jawaharlingam4@gmail.com": {
+        "tasks": [
+          {
+            "id": 1,
+            "taskHead": "Design product category navigation",
+            "description": "Create a user-friendly navigation system for browsing product categories",
+            "estimatedTime": "90",
+            "status": "toDo"
+          },
+          {
+            "id": 2,
+            "taskHead": "Implement user registration",
+            "description": "Develop a registration process for users to create accounts on the website",
+            "estimatedTime": "120",
+            "status": "inProgress"
+          },
+          {
+            "id": 3,
+            "taskHead": "Configure inventory management",
+            "description": "Set up a system to track and manage product inventory levels",
+            "estimatedTime": "165",
+            "status": "completed"
+          },
+          {
+            "id": 4,
+            "taskHead": "Implement product filtering",
+            "description": "Allow users to filter products based on various criteria (e.g., price, brand, etc.)",
+            "estimatedTime": "150",
+            "status": "toDo"
+          },
+          {
+            "id": 5,
+            "taskHead": "Design checkout process",
+            "description": "Create a streamlined and intuitive checkout process for users",
+            "estimatedTime": "180",
+            "status": "inProgress"
+          },
+          {
+            "id": 6,
+            "taskHead": "Implement wishlist functionality",
+            "description": "Enable users to save and manage their favorite products in a wishlist",
+            "estimatedTime": "105",
+            "status": "completed"
+          },
+          {
+            "id": 7,
+            "taskHead": "Add customer support chat",
+            "description": "Integrate a live chat feature for users to receive real-time support",
+            "estimatedTime": "150",
+            "status": "toDo"
+          },
+          {
+            "id": 8,
+            "taskHead": "Perform cross-browser testing",
+            "description": "Test the website on different web browsers to ensure compatibility",
+            "estimatedTime": "90",
+            "status": "inProgress"
+          },
+          {
+            "id": 9,
+            "taskHead": "Implement discount codes",
+            "description": "Enable users to apply discount codes during the checkout process",
+            "estimatedTime": "120",
+            "status": "completed"
+          },
+          {
+            "id": 10,
+            "taskHead": "Configure email notifications",
+            "description": "Set up automated email notifications for order confirmations and updates",
+            "estimatedTime": "105",
+            "status": "toDo"
+          }
+        ]
+      }
+    }
+  }
+]

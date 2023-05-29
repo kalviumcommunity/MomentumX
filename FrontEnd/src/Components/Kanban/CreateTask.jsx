@@ -1,7 +1,7 @@
 import { Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, Textarea } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
-function CreateTask({ isOpen, onClose, setTasks }) {
+function CreateTask({ isOpen, onClose, setTasks, projectName, userEmail }) {
 
 
   const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ function CreateTask({ isOpen, onClose, setTasks }) {
   
     const formDataCopy = { ...formData, estimatedTime: formattedTime };
 
-    fetch("http://localhost:3003/tasks", {
+    fetch(`http://localhost:3003/tasks/${projectName}/${userEmail}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ function CreateTask({ isOpen, onClose, setTasks }) {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent height="438px" margin= "calc((100vh - 438px) / 2)">
         <ModalHeader>Create New Task</ModalHeader>
         <ModalCloseButton />
         <ModalBody>

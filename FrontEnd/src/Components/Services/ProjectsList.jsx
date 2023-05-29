@@ -2,18 +2,18 @@ import { Flex, Text } from "@chakra-ui/react";
 import Puzzle from '@mui/icons-material/Extension';
 import { useEffect } from "react";
 
-function ProjectsList({projects, setProjectName}) {
+function ProjectsList({projectsList, setProjectName}) {
+
 
   useEffect(() => {
-    if (projects) {
-      setProjectName(projects[0]);
+    if (projectsList) {
+      setProjectName(projectsList[0]);
     }
-  }, [projects]);
+  }, [projectsList]);
 
   const handleProjectClick = (projectName) => {
     setProjectName(projectName);
   };
-
   return (
     <Flex
       flexDir="column"
@@ -28,8 +28,8 @@ function ProjectsList({projects, setProjectName}) {
         },
       }}
     >
-      {projects.length > 0 ? (
-        projects.map((item, index) => (
+      {projectsList.length > 0 ? (
+        projectsList.map((item, index) => (
           <Flex
             key={index}
             sx={{

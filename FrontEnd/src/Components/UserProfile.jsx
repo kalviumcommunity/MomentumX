@@ -10,7 +10,7 @@ const UserProfile = ({setUserEmail}) => {
 
   useEffect(() => {
     if (user && user.email) {
-      setUserEmail(user.email); // Set user's email if it exists
+      setUserEmail(user.email);
     }
   }, [user, setUserEmail]);
 
