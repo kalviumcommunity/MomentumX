@@ -1,10 +1,14 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 import { Draggable } from 'react-beautiful-dnd'
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 function Task({task, index}) {
+
+  const estimatedHours = Math.floor(task.estimatedTime / 60);
+  const estimatedMinutes = task.estimatedTime % 60;
+  const formattedTime = `Estimated- ${String(estimatedHours).padStart(2, '0')}:${String(estimatedMinutes).padStart(2, '0')} hrs`;
 
 
     return (
@@ -30,7 +34,7 @@ function Task({task, index}) {
               justifyContent="flex-start"
             >
               <Text color="#888888" className="xx-small" fontWeight="medium">
-                {task.estimatedTime}
+                {formattedTime}
               </Text>
               <Text margin="4px 0px" className="x-small" fontWeight="medium">
                 {task.taskHead}

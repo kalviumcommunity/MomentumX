@@ -20,11 +20,8 @@ function CreateTask({ isOpen, onClose, setTasks, projectName, userEmail }) {
   };
 
   const handleSubmit = () => {
-    const estimatedHours = Math.floor(formData.estimatedTime / 60);
-    const estimatedMinutes = formData.estimatedTime % 60;
-    const formattedTime = `Estimated- ${String(estimatedHours).padStart(2, '0')}:${String(estimatedMinutes).padStart(2, '0')} hrs`;
   
-    const formDataCopy = { ...formData, estimatedTime: formattedTime };
+    const formDataCopy = { ...formData};
 
     fetch(`http://localhost:3003/tasks/${projectName}/${userEmail}`, {
       method: "POST",
