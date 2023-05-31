@@ -61,7 +61,7 @@ function Column({title, tasks, id, setIsCreatingTask}) {
               isdraggingover={snapshot.isDraggingOver.toString()}
             >
               {tasks.map((task, index) => (
-                <Task key={index} index={index} task={task} />
+                <Task key={task.id} index={index} task={task} />
               ))}
               {provided.placeholder}
             </Box>

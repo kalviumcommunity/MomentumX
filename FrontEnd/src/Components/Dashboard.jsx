@@ -1,6 +1,6 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import userData from './Services/mock.json'
+import userData from './Services/mockUsers.json'
 import Board from "./Kanban/Board";
 import UserProfile from "./UserProfile";
 import ProjectsList from "./Services/ProjectsList";
