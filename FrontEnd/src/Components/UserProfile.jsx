@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Avatar, createTheme, ThemeProvider } from '@mui/material';
 import LogoutButton from "./Logout";
 import { Flex, Text, Box } from "@chakra-ui/react";
 
 
-const UserProfile = () => {
+const UserProfile = ({setUserEmail}) => {
   const { user, isAuthenticated, isLoading } = useAuth0();
+
+  useEffect(() => {
+    if (user && user.email) {
+      setUserEmail(user.email);
+    }
+  }, [user, setUserEmail]);
 
   if (isLoading) {
     return <Box className="x-small" width="100%" color="#929292" textAlign="center">Loading ...</Box>;
