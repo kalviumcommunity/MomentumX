@@ -1,26 +1,36 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import userData from './Services/mockUsers.json'
 import Board from "./Kanban/Board";
 import UserProfile from "./UserProfile";
 import ProjectsList from "./Services/ProjectsList";
 
 function Dashboard() {
-
-    const [userEmail, setUserEmail] = useState()
+    const [userEmail, setUserEmail] = useState();
+    const [userName, setUserName] = useState();
     const [projectsList, setProjectsList] = useState([]);
-    const [projectName, setProjectName] = useState("Loading...")
+    const [projectName, setProjectName] = useState("Loading...");
+    const HOST_URL = import.meta.env.VITE_HOST_URL
 
     useEffect(() => {
-        if (userEmail) {
-            for (let i = 0; i < userData.length; i++) {
-                if (userData[i].email === userEmail) {
-                    setProjectsList(userData[i].projectsList);
+        const fetchUserData = async () => {
+            try {
+                const response = await fetch(
+                    `${HOST_URL}/user/${userEmail}/${userName}`
+                );
+                if (!response.ok) {
+                    throw new Error("Error fetching user data");
                 }
-              }
+                const data = await response.json();
+                setProjectsList(data.projectsList);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        if (userEmail && userName) {
+            fetchUserData();
         }
-    }, [userEmail,userData]);
-      
+    }, [userEmail, userName]);
+
     return (
         <>
             <Box
@@ -47,15 +57,28 @@ function Dashboard() {
                     width="194px"
                     marginLeft="32px"
                 />
-                {projectsList && <ProjectsList setProjectName={setProjectName} projectsList={projectsList} />}
-                <UserProfile setUserEmail={setUserEmail} />
+                {projectsList && (
+                    <ProjectsList
+                        setProjectName={setProjectName}
+                        projectsList={projectsList}
+                    />
+                )}
+                <UserProfile
+                    setUserEmail={setUserEmail}
+                    setUserName={setUserName}
+                />
             </Flex>
-            <Box height="100vh" width="calc(100vw - 340px)" position="fixed" top="0px" right="0px" >
-                <Board projectName= {projectName} userEmail= {userEmail}/>
+            <Box
+                height="100vh"
+                width="calc(100vw - 340px)"
+                position="fixed"
+                top="0px"
+                right="0px"
+            >
+                <Board projectName={projectName} userEmail={userEmail} />
             </Box>
         </>
-    ); 
-    
+    );
 }
 
-export default Dashboard
+export default Dashboard;
