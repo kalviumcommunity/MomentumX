@@ -160,8 +160,6 @@ app.delete("/projects/:projectName/tasks/:id", async (req, res) => {
     const id = req.params.id;
     const assignedTo = req.body.assignedTo;
 
-    console.log(req.body)
-
     try {
         const projectData = await Project.findOne({ project: projectName });
         if (!projectData) {
