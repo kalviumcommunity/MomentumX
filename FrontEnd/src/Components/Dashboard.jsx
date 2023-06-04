@@ -9,13 +9,12 @@ function Dashboard() {
     const [userName, setUserName] = useState();
     const [projectsList, setProjectsList] = useState([]);
     const [projectName, setProjectName] = useState("Loading...");
-    const HOST_URL = import.meta.env.VITE_HOST_URL
 
     useEffect(() => {
         const fetchUserData = async () => {
             try {
                 const response = await fetch(
-                    `${HOST_URL}/users/${userEmail}/${userName}`
+                    `/users/${userEmail}/${userName}`
                 );
                 if (!response.ok) {
                     throw new Error("Error fetching user data");

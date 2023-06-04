@@ -24,7 +24,7 @@ function EditTask({ isOpen, onClose, setTasks, task, projectName }) {
   const handleSubmit = () => {
     const formDataCopy = { ...formData };
 
-    fetch(`${HOST_URL}/projects/${projectName}/tasks/${task._id}`, {
+    fetch(`/projects/${projectName}/tasks/${task._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
