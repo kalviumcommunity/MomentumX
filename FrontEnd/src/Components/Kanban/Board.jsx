@@ -24,7 +24,7 @@ function Board({ projectName, userEmail }) {
 
     useEffect(() => {
         if (userEmail && projectName) {
-            fetch(`${HOST_URL}/alltasks/${projectName}/${userEmail}`)
+            fetch(`${HOST_URL}/projects/${projectName}/tasks/${userEmail}`)
                 .then((response) => response.json())
                 .then((json) => {
                     setTasks(json);
@@ -38,7 +38,7 @@ function Board({ projectName, userEmail }) {
     function updateTaskStatus(id, status) {
         if (userEmail && projectName) {
             fetch(
-                `${HOST_URL}/updatetask/${projectName}/${userEmail}/${id}/status`,
+                `${HOST_URL}/projects/${projectName}/tasks/${id}`,
                 {
                     method: "PATCH",
                     headers: {

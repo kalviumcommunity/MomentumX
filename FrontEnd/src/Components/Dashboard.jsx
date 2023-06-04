@@ -15,7 +15,7 @@ function Dashboard() {
         const fetchUserData = async () => {
             try {
                 const response = await fetch(
-                    `${HOST_URL}/user/${userEmail}/${userName}`
+                    `${HOST_URL}/users/${userEmail}/${userName}`
                 );
                 if (!response.ok) {
                     throw new Error("Error fetching user data");

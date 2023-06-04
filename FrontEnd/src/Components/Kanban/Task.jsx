@@ -36,12 +36,17 @@ function Task({ task, index, setTasks, projectName }) {
     };
 
     const confirmDelete = async () => {
+
         try {
             const response = await fetch(
-                `${HOST_URL}/deletetask/${projectName}/${task.assignedTo}/${task._id}`,
+                `${HOST_URL}/projects/${projectName}/tasks/${task._id}`,
                 {
                     method: "DELETE",
-                }
+                    headers: {
+                      "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ assignedTo: task.assignedTo })
+                  }
             );
 
             if (response.ok) {

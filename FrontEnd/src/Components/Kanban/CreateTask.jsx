@@ -34,9 +34,9 @@ function CreateTask({ isOpen, onClose, setTasks, projectName, userEmail }) {
     };
 
     const handleSubmit = () => {
-        const formDataCopy = { ...formData };
+        const formDataCopy = { ...formData, assignedTo : userEmail };
 
-        fetch(`${HOST_URL}/createtask/${projectName}/${userEmail}`, {
+        fetch(`${HOST_URL}/projects/${projectName}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -54,7 +54,7 @@ function CreateTask({ isOpen, onClose, setTasks, projectName, userEmail }) {
                 });
                 onClose();
 
-                fetch(`${HOST_URL}/alltasks/${projectName}/${userEmail}`)
+                fetch(`${HOST_URL}/projects/${projectName}/tasks/${userEmail}`)
                     .then((response) => response.json())
                     .then((updatedTasks) => {
                         setTasks(updatedTasks);

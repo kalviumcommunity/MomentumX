@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const MONGODB_URL = process.env.VITE_MONGODB_URL;
+const MONGODB_URL = process.env.MONGODB_URL;
 
 const connectDB = async () => {
     try {
@@ -11,8 +11,6 @@ const connectDB = async () => {
             useUnifiedTopology: true,
             useNewUrlParser: true
         })
-
-        console.log(`MongoDB connected: ${MONGODB_URL}`)
 
     } catch (error) {
         console.error(`Error connecting to MongoDB: ${error.message}`);

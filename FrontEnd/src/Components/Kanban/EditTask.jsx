@@ -10,6 +10,7 @@ function EditTask({ isOpen, onClose, setTasks, task, projectName }) {
     description: task.description || "",
     estimatedTime: task.estimatedTime || "",
     status: task.status || "toDo",
+    assignedTo : task.assignedTo || ""
   });
 
   const handleInputChange = (e) => {
@@ -23,8 +24,8 @@ function EditTask({ isOpen, onClose, setTasks, task, projectName }) {
   const handleSubmit = () => {
     const formDataCopy = { ...formData };
 
-    fetch(`${HOST_URL}/updatetask/${projectName}/${task.assignedTo}/${task._id}/details`, {
-      method: "PATCH",
+    fetch(`${HOST_URL}/projects/${projectName}/tasks/${task._id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
