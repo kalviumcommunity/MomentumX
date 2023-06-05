@@ -5,14 +5,16 @@ import LogoutButton from "./Logout";
 import { Flex, Text, Box } from "@chakra-ui/react";
 
 
-const UserProfile = ({setUserEmail}) => {
+const UserProfile = ({setUserEmail, setUserName}) => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   useEffect(() => {
     if (user && user.email) {
       setUserEmail(user.email);
+      setUserName(user.name)
     }
   }, [user, setUserEmail]);
+
 
   if (isLoading) {
     return <Box className="x-small" width="100%" color="#929292" textAlign="center">Loading ...</Box>;
