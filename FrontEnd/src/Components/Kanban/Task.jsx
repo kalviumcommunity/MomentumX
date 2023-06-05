@@ -39,7 +39,7 @@ function Task({ task, index, setTasks, projectName }) {
 
         try {
             const response = await fetch(
-                `/projects/${projectName}/tasks/${task._id}`,
+                `${HOST_URL}/projects/${projectName}/tasks/${task._id}`,
                 {
                     method: "DELETE",
                     headers: {
