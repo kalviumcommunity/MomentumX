@@ -61,17 +61,19 @@ app.get("/projects/:projectName/tasks/:userEmail", async (req, res) => {
 app.patch("/projects/:projectName/tasks/:id", async (req, res) => {
     const projectName = req.params.projectName;
     const id = req.params.id;
-    const { status, assignedTo } = req.body;
+    const { status } = req.body;
 
     try {
         const projectData = await Project.findOne({ project: projectName });
+
         if (!projectData) {
             return res.status(404).json({ error: "Project not found" });
         }
 
         const task = projectData.tasks.find((task) => {
-            return task.id == id && task.assignedTo === assignedTo;
+            return task._id == id;
         });
+
 
         if (!task) {
             return res.status(404).json({ error: "Task not found" });
